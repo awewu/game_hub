@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#f8f9fc" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="description" content="一个属于你的口袋游戏库，随时开始一局。" />
+  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="icon" href="icon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="library.css" />
+  <script src="theme.js"></script>
+  <title>口袋游戏 · 游戏库</title>
+</head>
+<body>
+  <main class="app-shell library-shell">
+    <header class="library-header">
+      <a class="brand" href="index.html" aria-label="口袋游戏首页"><span class="brand-icon" aria-hidden="true">✦</span>口袋游戏</a>
+      <div class="library-header-actions"><span class="header-note">随时，来一局</span><button class="theme-toggle" data-theme-toggle type="button" aria-label="切换到夜间模式">☾</button></div>
+    </header>
+    <section class="resume-panel" id="resumePanel" hidden aria-labelledby="resumeTitle">
+      <div><span class="resume-eyebrow">上次玩到这里</span><h2 id="resumeTitle">继续数独</h2><p id="resumeDescription"></p></div>
+      <a class="resume-link" href="sudoku.html" aria-label="继续上次的数独游戏">继续 <span aria-hidden="true">↗</span></a>
+    </section>
+    <section class="library-games" aria-labelledby="gamesTitle">
+      <div class="library-section-heading"><h2 id="gamesTitle">选择你的游戏</h2><span id="gameCount">1 款可玩</span></div>
+      <div id="gameList" class="game-list">
+        <a class="library-game" href="sudoku.html?new=1&difficulty=easy" data-game="sudoku">
+          <div class="game-art sudoku-art" aria-hidden="true"><div class="mini-board"><span>1</span><span></span><span>3</span><span></span><span>5</span><span></span><span>7</span><span></span><span>9</span></div><span class="art-spark">✦</span><span class="game-badge">现在就玩</span></div>
+          <div class="library-game-content"><div class="game-name-row"><h3>数独 <span>Sudoku</span></h3><span class="game-arrow" aria-hidden="true">↗</span></div><p>用数字理清思绪，享受每一格的成就感。</p><div class="game-tags"><span>逻辑益智</span><span>3 种难度</span><span>可离线</span></div></div>
+        </a>
+      </div>
+    </section>
+    <aside class="coming-next"><span class="coming-icon" aria-hidden="true">＋</span><div><h2>快乐，还在扩充中</h2><p>更多小游戏，陆续加入这个口袋。</p></div><span class="coming-label">敬请期待</span></aside>
+    <footer class="library-footer"><span aria-hidden="true">✦</span> 小小的游戏，刚刚好的放松</footer>
+  </main>
+  <div class="difficulty-modal" id="difficultyModal" hidden>
+    <div class="difficulty-backdrop" data-close-difficulty></div>
+    <section class="difficulty-dialog" role="dialog" aria-modal="true" aria-labelledby="difficultyTitle">
+      <button class="modal-close" id="closeDifficulty" type="button" aria-label="关闭">×</button>
+      <p class="eyebrow">SUDOKU · READY?</p>
+      <h2 id="difficultyTitle">选择难度</h2>
+      <p>选一个适合现在状态的挑战，马上开始。</p>
+      <div class="difficulty-choice-list">
+        <a class="difficulty-choice easy-choice" data-difficulty="easy" href="sudoku.html?new=1&difficulty=easy"><span class="choice-icon">☼</span><span><strong>简单</strong><small>适合刚刚开始</small></span><b>→</b></a>
+        <a class="difficulty-choice medium-choice" data-difficulty="medium" href="sudoku.html?new=1&difficulty=medium"><span class="choice-icon">◒</span><span><strong>中等</strong><small>来一点思考挑战</small></span><b>→</b></a>
+        <a class="difficulty-choice hard-choice" data-difficulty="hard" href="sudoku.html?new=1&difficulty=hard"><span class="choice-icon">✦</span><span><strong>困难</strong><small>给高手的专注时刻</small></span><b>→</b></a>
+      </div>
+    </section>
+  </div>
+  <script src="library.js"></script>
+</body>
+</html>

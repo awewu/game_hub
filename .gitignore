@@ -1,0 +1,14 @@
+node_modules/
+.qa/
+.tools/
+android/.gradle/
+android/build/
+android/app/build/
+android/local.properties
+.android-sdk/
+/android-tools.zip
+/node20.zip
+/node-win-x64-*.tgz
+*.apk
+*.jks
+*.keystore

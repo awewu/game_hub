@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#f8f9fc" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="description" content="经典俄罗斯方块，简单、直接、耐玩。" />
+  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="icon" href="icon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="styles.css" />
+  <script src="theme.js"></script>
+  <title>俄罗斯方块 · Tetris</title>
+</head>
+<body class="tetris-body">
+  <main class="app-shell tetris-shell">
+    <nav class="game-navigation" aria-label="页面导航"><a href="index.html">← 返回游戏库</a><span class="nav-actions"><span class="save-status" id="saveStatus">自动保存已开启</span><button class="theme-toggle" data-theme-toggle type="button" aria-label="切换到夜间模式">☾</button></span></nav>
+    <header class="tetris-header">
+      <div><p class="eyebrow">CLASSIC · DROP &amp; CLEAR</p><h1>俄罗斯方块 <span>Tetris</span></h1></div>
+      <button class="tetris-icon-button" id="restartButton" type="button" aria-label="重新开始">↻</button>
+    </header>
+
+    <section class="tetris-layout" aria-label="俄罗斯方块游戏区">
+      <div class="tetris-board-card">
+        <div class="tetris-board-wrap">
+          <canvas id="tetrisBoard" width="200" height="400" aria-label="俄罗斯方块棋盘"></canvas>
+          <div class="tetris-overlay" id="tetrisOverlay" hidden><div><strong id="overlayTitle">已暂停</strong><small id="overlayHint">点击继续</small></div></div>
+        </div>
+      </div>
+      <aside class="tetris-side" aria-label="游戏数据">
+        <div class="tetris-stat"><small>得分</small><strong id="score">000000</strong></div>
+        <div class="tetris-stat"><small>消行</small><strong id="lines">0</strong></div>
+        <div class="tetris-stat"><small>等级</small><strong id="level">1</strong></div>
+        <div class="next-card"><span>下一个</span><canvas id="nextPiece" width="100" height="62" aria-label="下一个方块"></canvas></div>
+        <button class="tetris-side-button" id="pauseButton" type="button">暂停</button>
+      </aside>
+    </section>
+
+    <section class="tetris-controls" aria-label="操作区">
+      <div class="tetris-dpad" aria-label="方向键">
+        <button class="tetris-control pad-up" data-action="rotate" type="button" aria-label="旋转">↑</button>
+        <button class="tetris-control pad-left" data-action="left" type="button" aria-label="左移">←</button>
+        <button class="tetris-control pad-down" data-action="down" type="button" aria-label="加速下落">↓</button>
+        <button class="tetris-control pad-right" data-action="right" type="button" aria-label="右移">→</button>
+      </div>
+      <button class="tetris-control drop-button" data-action="drop" type="button" aria-label="直接落到底">⇣<span>落到底</span></button>
+    </section>
+    <span class="tetris-save-status" id="tetrisTip">自动保存进度 · 方向键也可以操作</span>
+    <footer>排满一行，就离成功更近一点</footer>
+  </main>
+  <script src="tetris.js"></script>
+</body>
+</html>

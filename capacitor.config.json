@@ -1,0 +1,7 @@
+{
+  "appId": "com.example.sudoku",
+  "appName": "口袋游戏",
+  "webDir": "www",
+  "bundledWebRuntime": false,
+  "server": { "androidScheme": "https" }
+}

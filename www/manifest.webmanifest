@@ -1,0 +1,11 @@
+{
+  "name": "口袋游戏 · 游戏库",
+  "short_name": "口袋游戏",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#f8f9fc",
+  "theme_color": "#3559df",
+  "lang": "zh-CN",
+  "description": "一个属于你的口袋游戏库，随时开始一局。",
+  "orientation": "portrait"
+}

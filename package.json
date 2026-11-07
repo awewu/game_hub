@@ -1,0 +1,21 @@
+{
+  "name": "sudoku-mobile",
+  "version": "1.0.0",
+  "private": true,
+  "description": "适合手机使用的简洁数独游戏",
+  "scripts": {
+    "serve": "python -m http.server 4173 --directory www",
+    "cap:add:android": "cap add android",
+    "cap:add:ios": "cap add ios",
+    "cap:sync": "cap sync",
+    "apk:debug": "npm run cap:sync && cd android && gradlew.bat assembleDebug",
+    "cap:open:android": "cap open android",
+    "cap:open:ios": "cap open ios"
+  },
+  "dependencies": {
+    "@capacitor/core": "^6.1.2",
+    "@capacitor/android": "^6.1.2",
+    "@capacitor/ios": "^6.1.2",
+    "@capacitor/cli": "^6.1.2"
+  }
+}
